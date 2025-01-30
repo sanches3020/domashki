@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head> 
+    <meta charset="UTF 8">
+    <title>Title</title>
+    <link rel=" stylesheet" href="{{url_for('static', filename= 'css/style.css')}}"
+</head>
+    <body>
+        {% if candidate.id == a  %}
+        <pre>Имя - {{candidate["name"]}}
+        Позиция - {{candidate["position"]}}
+        Навыки - {{candidate["skills"]}}
+        <img src="{{candidate.picture }}" alt="{{ candidate.name }}">
+        </pre>
+        {%endif%}
+    </body>
+</html>
