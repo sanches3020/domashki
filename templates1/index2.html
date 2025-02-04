@@ -1,0 +1,20 @@
+!DOCTYPE html>
+<html lang="ru">
+<head> 
+    <meta charset="UTF-8">
+    <title>Список препаратов</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <form action="/glavnoe/">
+        <select name = "/result_glavnoe/">
+            <option value="name">По названию</option>
+            <option value="manufacturer">По производителю</option>
+            <option value="form">По форме</option>
+            <option value="pricename">По цене</option>
+        </select>
+        <input type="text" name="text " placeholder="Введите значение">
+        <input type="submit" value="Найти">
+    </form>
+</body>
+</html>
