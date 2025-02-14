@@ -62,17 +62,16 @@
     </style>
 </head>
 <body>
-
-
     <div class="container">
-
-        <div class="post">
-            <div class="title"></div>
-            <div class="content"><img src="/"> </div>
-            <div class="description"> </div>
-        </div>
-
-
+        {% for post in posts %}
+            <div class="post">
+                <div class="title">{{ post[1] }}</div>
+                <div class="content">
+                    <img src="{{ url_for('static', filename='uploads/' ~ post[2]) }}" alt="{{ post[1] }}">
+                </div>
+                <div class="description">{{ post[3] }}</div>
+            </div>
+        {% endfor %}
     </div>
 </body>
 </html>
